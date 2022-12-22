@@ -1,5 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {
+  SingleFeedback,
+  Summary,
+  AllFeedbacks,
+  Lable,
+} from './Statistics.styled';
 
 export const Statistics = ({
   good,
@@ -10,11 +16,25 @@ export const Statistics = ({
 }) => {
   return (
     <>
-      <p>Good: {good}</p>
-      <p>Neutral: {neutral}</p>
-      <p>Bad: {bad}</p>
-      <p>Total: {total}</p>
-      <p>positive: {positivePercentage}</p>
+      <AllFeedbacks>
+        <SingleFeedback>
+          <Lable>Good</Lable>
+          <p>{good}</p>
+        </SingleFeedback>
+        <SingleFeedback>
+          <Lable>Neutral</Lable>
+          <p>{neutral}</p>
+        </SingleFeedback>
+        <SingleFeedback>
+          <Lable>Bad</Lable>
+          <p>{bad}</p>
+        </SingleFeedback>
+      </AllFeedbacks>
+
+      <Summary>
+        <Lable>Total: {total}</Lable>
+        <Lable>Positive: {positivePercentage}</Lable>
+      </Summary>
     </>
   );
 };
