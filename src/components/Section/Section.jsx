@@ -2,9 +2,9 @@ import React from 'react';
 
 export const Section = ({ title, children }) => {
   return (
-    <Section>
+    <section>
       <h2>{title}</h2>
       {children}
-    </Section>
+    </section>
   );
 };
