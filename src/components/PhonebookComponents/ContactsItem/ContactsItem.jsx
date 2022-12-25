@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Name, Item } from './ContactsItem.styled';
+import { Name, Item, Btn } from './ContactsItem.styled';
 
 export const ContactsItem = ({ contact, onDelete }) => {
   const { id, name, number } = contact;
@@ -8,9 +8,9 @@ export const ContactsItem = ({ contact, onDelete }) => {
       <Item>
         <Name>{name}</Name>
         <span>{number}</span>
-        <button type="button" onClick={() => onDelete(id)}>
+        <Btn type="button" onClick={() => onDelete(id)}>
           X
-        </button>
+        </Btn>
       </Item>
     </>
   );

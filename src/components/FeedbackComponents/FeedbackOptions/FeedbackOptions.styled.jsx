@@ -13,6 +13,7 @@ export const FeedBackBtn = styled.button`
   background-color: ${props => props.value === 'neutral' && 'grey'};
   background-color: ${props => props.value === 'bad' && 'red'};
   border-radius: 10px;
+  cursor: pointer;
 `;
 export const BtnsWrapper = styled.div`
   display: flex;

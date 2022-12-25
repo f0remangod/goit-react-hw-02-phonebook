@@ -9,3 +9,7 @@ export const Item = styled.li`
   justify-content: space-between;
   border-bottom: 1px solid black;
 `;
+
+export const Btn = styled.button`
+  cursor: pointer;
+`;

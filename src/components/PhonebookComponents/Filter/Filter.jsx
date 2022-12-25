@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { FilterInput, FilterWrapper } from './Filter.styled';
+import { FilterInput, FilterWrapper, Btn } from './Filter.styled';
 
 export const Filter = ({ onChange, value, onClick }) => {
   return (
@@ -14,9 +14,9 @@ export const Filter = ({ onChange, value, onClick }) => {
             onChange={onChange}
           />
         </label>
-        <button type="button" onClick={onClick}>
+        <Btn type="button" onClick={onClick}>
           Clear
-        </button>
+        </Btn>
       </FilterWrapper>
     </>
   );

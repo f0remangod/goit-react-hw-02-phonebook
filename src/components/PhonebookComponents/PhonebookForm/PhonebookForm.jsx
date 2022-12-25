@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import { Form } from './PhonebookForm.styled';
+import { Form, Btn } from './PhonebookForm.styled';
 
 export class PhonebookForm extends Component {
   state = {
@@ -83,7 +83,7 @@ export class PhonebookForm extends Component {
           onChange={this.handleInputChange}
           required
         />
-        <button type="submit">Add contact</button>
+        <Btn type="submit">Add contact</Btn>
       </Form>
     );
   }
