@@ -21,14 +21,15 @@ export class Phonebook extends React.Component {
       number: this.state.number,
     };
 
-    const newContactName = contact.name;
-    const alreadyExists = this.state.contacts.findIndex(
-      contact => contact.name === newContactName
-    );
+    const alreadyExists = this.state.contacts.findIndex(item => {
+      const existingItem = item.name.toLowerCase();
+      const newItem = contact.name.toLowerCase();
+      return existingItem === newItem;
+    });
 
     switch (alreadyExists >= 0) {
       case true:
-        Notify.failure(`${newContactName} is already in contacts`);
+        Notify.failure(`${contact.name} is already in contacts`);
         break;
       default:
         this.setState(({ contacts }) => ({
