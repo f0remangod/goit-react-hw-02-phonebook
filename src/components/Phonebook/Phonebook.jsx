@@ -23,7 +23,7 @@ export class Phonebook extends React.Component {
 
     const newContactName = contact.name;
     const alreadyExists = this.state.contacts.findIndex(
-      contact => contact.name.toLowerCase === newContactName.toLowerCase
+      contact => contact.name === newContactName
     );
 
     switch (alreadyExists >= 0) {
