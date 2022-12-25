@@ -1,15 +1,11 @@
-import { Feedback } from './Feedback/Feedback';
-import { Phonebook } from './Phonebook/Phonebook';
+import { Feedback } from './FeedbackComponents/Feedback/Feedback';
+import { Phonebook } from './PhonebookComponents/Phonebook/Phonebook';
 
 export const App = () => {
   return (
     <>
-      <>
-        <Feedback />
-      </>
-      <>
-        <Phonebook />
-      </>
+      <Feedback />
+      <Phonebook />
     </>
   );
 };

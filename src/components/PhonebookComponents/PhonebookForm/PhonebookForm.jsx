@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { Form } from './PhonebookForm.styled';
 
 export class PhonebookForm extends Component {
   state = {
@@ -61,11 +62,12 @@ export class PhonebookForm extends Component {
   render() {
     const { name, number } = this.state;
     return (
-      <form onSubmit={this.handleFormSubmit}>
+      <Form onSubmit={this.handleFormSubmit}>
         <input
           type="text"
           name="name"
           value={name}
+          placeholder="Enter name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           onChange={this.handleInputChange}
@@ -75,13 +77,14 @@ export class PhonebookForm extends Component {
           type="tel"
           name="number"
           value={number}
+          placeholder="Enter phone number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           onChange={this.handleInputChange}
           required
         />
         <button type="submit">Add contact</button>
-      </form>
+      </Form>
     );
   }
 }
